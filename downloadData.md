@@ -17,25 +17,18 @@ The following descriptions of the 9 variables in the dataset are taken from the 
 * Sub_metering_2: energy sub-metering No. 2 (in watt-hour of active energy). It corresponds to the laundry room, containing a washing-machine, a tumble-drier, a refrigerator and a light.
 * Sub_metering_3: energy sub-metering No. 3 (in watt-hour of active energy). It corresponds to an electric water-heater and an air-conditioner.
 
-### Download file
+### Download and unzip file
 
 ```r
-print("download data")
+download.file(url = "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip", 
+    destfile = "../rawdata/ElectricPowerConsumption.zip", method = "curl")
 ```
 
 ```
-## [1] "download data"
+## Warning: download had nonzero exit status
 ```
-
-
-### Quick test
 
 ```r
-print("output test")
+unzip("../rawdata/ElectricPowerConsumption.zip", exdir = "../rawdata/")
 ```
-
-```
-## [1] "output test"
-```
-
 

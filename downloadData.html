@@ -201,20 +201,16 @@ hljs.initHighlightingOnLoad();
 <li>Sub_metering_3: energy sub-metering No. 3 (in watt-hour of active energy). It corresponds to an electric water-heater and an air-conditioner.</li>
 </ul>
 
-<h3>Download file</h3>
+<h3>Download and unzip file</h3>
 
-<pre><code class="r">print(&quot;download data&quot;)
+<pre><code class="r">download.file(url = &quot;https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip&quot;, 
+    destfile = &quot;../rawdata/ElectricPowerConsumption.zip&quot;, method = &quot;curl&quot;)
 </code></pre>
 
-<pre><code>## [1] &quot;download data&quot;
+<pre><code>## Warning: download had nonzero exit status
 </code></pre>
 
-<h3>Quick test</h3>
-
-<pre><code class="r">print(&quot;output test&quot;)
-</code></pre>
-
-<pre><code>## [1] &quot;output test&quot;
+<pre><code class="r">unzip(&quot;../rawdata/ElectricPowerConsumption.zip&quot;, exdir = &quot;../rawdata/&quot;)
 </code></pre>
 
 </body>
