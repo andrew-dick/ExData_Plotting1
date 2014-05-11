@@ -9,7 +9,6 @@ dataset <- subset(x = rawdata, Date == "1/2/2007" | Date == "2/2/2007")
 # create timeseries
 dataset$dateTime <- as.POSIXct(strptime(paste(dataset$Date, dataset$Time), "%d/%m/%Y %H:%M:%S"))
 
-plot(data=dataset, Global_active_power ~ dateTime, type="l", ylab = "Global Active Power (kilowatts)", xlab=NA)
 
 # set up plot
 par(cex=0.75)
