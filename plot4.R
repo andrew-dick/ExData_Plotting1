@@ -15,10 +15,10 @@ png(filename="figure/plot4.png", width=480, height=480)
 
 # set up plot
 par(mfrow=c(2,2))
-par(cex=0.5)
+par(cex=0.8)
 
 # plot 1
-plot(data=dataset, Global_active_power ~ dateTime, type="l", ylab = "Global Active Power (kilowatts)", xlab=NA)
+plot(data=dataset, Global_active_power ~ dateTime, type="l", ylab = "Global Active Power", xlab=NA)
 
 # plot 2
 plot(data=dataset, Voltage ~ dateTime, type="l", xlab="datetime")
@@ -34,3 +34,4 @@ legend("topright", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_
 plot(data=dataset, Global_reactive_power ~ dateTime, type="l", xlab="datetime")
 
 dev.off()
+
